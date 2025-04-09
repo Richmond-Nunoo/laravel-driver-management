@@ -44,6 +44,14 @@ A lightweight Driver Registration & Admin Dashboard system built with Laravel. D
 <p align="center">
   <img src="https://github.com/Richmond-Nunoo/laravel-driver-management/blob/main/public/images/d.png" width="90%" />
 </p>
+
+
+## Driver View
+<p align="center">
+  <img src="https://github.com/Richmond-Nunoo/laravel-driver-management/blob/main/public/images/5.png" width="32%" />
+  <img src="https://github.com/Richmond-Nunoo/laravel-driver-management/blob/main/public/images/6.png" width="32%" />
+
+</p>
   
 ## 🌐 Live Demo
 
