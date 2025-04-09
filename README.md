@@ -21,12 +21,30 @@
 
 ---
 
+
+
 # 🚚 Driver Registration System – Laravel Project
 
 A lightweight Driver Registration & Admin Dashboard system built with Laravel. Designed and developed as a 24-hour MVP to quickly manage driver registrations, including document uploads, email confirmations, and admin review/export.
 
 ---
 
+## 🖼️ Screenshots
+
+### 📱 Mobile View (Split into 3)
+
+<p align="center">
+  <img src="public/images/screenshot1.jpg" width="32%" />
+  <img src="public/images/screenshot2.jpg" width="32%" />
+  <img src="public/images/screenshot3.jpg" width="32%" />
+</p>
+
+### 💻 Desktop View
+
+<p align="center">
+  <img src="public/images/desktop.jpg" width="90%" />
+</p>
+  
 ## 🌐 Live Demo
 
 - **Driver Registration:** [https://driver.qredisave.com](https://driver.qredisave.com)
@@ -122,7 +140,7 @@ resources/views/
  ├── index.blade.php
  ├── drivers/
  └── admin/
- 
+
 🤝 Contributing
 Pull requests are welcome!
 For major changes, please open an issue first to discuss what you'd like to contribute.
