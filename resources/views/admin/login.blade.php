@@ -53,18 +53,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById('loginForm');
-        form.addEventListener('submit', function() {
-            const btn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const btnSpinner = document.getElementById('btnSpinner');
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', function() {
+                const btn = document.getElementById('submitBtn');
+                const btnText = document.getElementById('btnText');
+                const btnSpinner = document.getElementById('btnSpinner');
 
-            btn.setAttribute('disabled', true);
-            btnText.textContent = "Processing...";
-            btnSpinner.classList.remove('d-none');
+                btn.setAttribute('disabled', true);
+                btnText.textContent = "Processing...";
+                btnSpinner.classList.remove('d-none');
+            });
         });
-    });
     </script>
 </body>
 

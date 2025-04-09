@@ -76,7 +76,7 @@ class DriverController extends Controller
         ]);
 
         // Send the confirmation email
-        Mail::to($driver->email)->send(new DriverRegistered($driver));
+        // Mail::to($driver->email)->send(new DriverRegistered($driver));
 
 
         // Redirect to the driver dashboard with the newly created driver ID
