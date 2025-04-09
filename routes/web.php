@@ -19,3 +19,32 @@ Route::post('/check-status', [DriverController::class, 'checkStatus'])->name('dr
 
 // Driver dashboard route (after successful registration or lookup)
 Route::get('/driver-dashboard/{driver}', [DriverController::class, 'driversDashboard'])->name('drivers.dashboard');
+
+
+
+
+// Admin Routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Authentication Routes
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    // Admin Dashboard
+    Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware('auth:admin')->name('index');
+
+    // Driver Management Routes
+    Route::prefix('drivers')->name('drivers.')->group(function () {
+        Route::get('/', [AdminDriverController::class, 'index'])->name('index');
+        Route::get('/filter/{status}', [AdminDriverController::class, 'filter'])->name('filter');
+        Route::get('/{driver}/edit', [AdminDriverController::class, 'edit'])->name('edit');
+        Route::put('/{driver}', [AdminDriverController::class, 'update'])->name('update');
+        Route::get('/create', [AdminDriverController::class, 'add'])->name('create');
+        Route::post('/', [AdminDriverController::class, 'store'])->name('store');
+        Route::delete('/{id}', [AdminDriverController::class, 'destroy'])->name('destroy');
+        Route::patch('/{driver}/status', [AdminDriverController::class, 'updateStatus'])->name('updateStatus');
+    });
+
+    // PDF Export
+    Route::get('/export-pdf', [AuthController::class, 'exportPdf'])->middleware('auth:admin')->name('export-pdf');
+});

@@ -1,0 +1,57 @@
+@media (max-width: 991.98px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #sidebarToggle {
+        display: block;
+    }
+
+    /* Adjust card padding on mobile */
+    .card-body {
+        padding: 1rem;
+    }
+
+    /* Stack stats cards on mobile */
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    /* Ensure main content is visible */
+    .main-content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        visibility: visible !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ensure the "No data" message is properly displayed */
+    #driversTable > tbody > tr > td[colspan] {
+        display: table-cell !important;
+    }
+
+    /* Hide some columns on mobile */
+    #driversTable th:nth-child(3),
+    #driversTable td:nth-child(3), /* Email */
+    #driversTable th:nth-child(7),
+    #driversTable td:nth-child(7) /* Document */
+    {
+        display: none;
+    }
+}
